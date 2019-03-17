@@ -1,11 +1,11 @@
 /* ---------------------- CSS for header and footer starts here ---------------------- */
-@media screen and (max-width : 768px)
+@media screen and (max-width : 991px)
 {
 	.navbar-toggle
 	{
 		visibility: visible;
 	}
-	#main_div_for_main_page 
+	#main_div_for_main_page
 	{
 		position: static;
 		transform: translate(5%, 1%);
@@ -76,6 +76,7 @@ ul > li > .nav-link:hover
     top:50%;
     transform: translateY(-50%);
     padding: 10px 0px;
+	margin-bottom: 50px;
 }
 
 .image_above_button
@@ -152,7 +153,6 @@ body
     border: 2px solid #E8E8E8;
     border-radius: 15px;
     background: rgba(255,255,255,0.50);
-    height: 80vh;
 }
 
 #login_form_container:hover
