@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <!-- Head starts here -->
+    <head>
+        <title>Faculty Side View</title>
+        <meta charset="utf-8">
+        
+        <!-- CSS Files included -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+    </head>
+    <!-- Head ends here -->
+    
+    <!-- Body starts here -->
+    <body>
+            <div class="container-fluid">
+				<!-- navbar starts here -->
+				<!-- navbar will have dark theme and will always remain on the top of each page-->
+				<nav class="navbar navbar-expand-md navbar-dark navbar-sticky-top bg-dark" >
+					<a class="navbar-brand" href=""><img src="assets/img/" alt="logo" name="university-logo" aria-label="logo"/></a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<!--Links that navbar contains-->
+
+					<div class="collapse navbar-collapse text-center" id="my_nav">
+						<ul class="navbar-nav mr-auto ml-5">
+							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Courses</a>
+								<div class="dropdown-menu">
+									<!-- Display the list of courses here -->
+									<a class="dropdown-item" href="">Course No : 1</a>
+									<a class="dropdown-item" href="">Course No : 2</a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >New Course</a></li>
+							<li class="nav-item"><a class="nav-link" href=".html" target="_self" ><Remove></Remove>Drop Course</a></li>
+						</ul>
+						
+							<!--Links that navbar contains-->
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="#" target="_self" onClick="confirm_logout()">Logout</a></li>
+							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+						</ul>
+					</div>
+				</nav>
+				<!-- Navbar ends here -->
+				
+				
+				<!-- Main page starts view -->
+				<div class="container bg-light">
+					<div class="row" id="full_page_row_faculty">
+						
+					</div>
+				</div>
+				<!-- Main page ends view -->
+
+				
+                <!-- Footer starts here -->
+                <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
+                    <div class="footer-copyrights text-center py-3 bg-dark strip_behind_footer">
+                        <span id="copyright_text">&copy; WOLFPACK 2019 : </span>
+                        <a href="https:www.google.com">wolfpack.pk</a>
+                    </div>
+                </footer>
+                <!-- Footer ends here-->
+            </div>
+            <!-- Container-fluid ends here -->
+		
+		<!-- Javascript code starts here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/scripts.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Javascript code ends here -->
+    </body>
+<!-- Body ends here -->
+
+    
+</html>

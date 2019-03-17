@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <!-- Head starts here -->
+    <head>
+        <title>Faculty Sign Up Page</title>
+        <meta charset="utf-8">
+        
+        <!-- CSS Files included -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+    </head>
+    <!-- Head ends here -->
+    
+    <!-- Body starts here -->
+    <body>
+        <div id="main_div">
+            <div class="container-fluid">
+				<!-- navbar starts here -->
+				<!-- navbar will have dark theme and will always remain on the top of each page-->
+				<nav class="navbar navbar-expand-md navbar-dark navbar-sticky-top bg-dark" >
+					<a class="navbar-brand" href=""><img src="assets/img/" alt="logo" name="university-logo" aria-label="logo"/></a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<!--Links that navbar contains-->
+					<div class="collapse navbar-collapse text-center" id="my_nav">
+						<ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="index.html" target="_self">Home</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="faculty_login.html" target="_self">Login</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+                        </ul>
+					</div>
+				</nav>
+				
+				
+                <div class="container">
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="login_form_container">
+                        <form method="post" action="https://www.google.com" class="text-center" id="login_form">
+                            <br />
+                            <h4><strong>CREATE FACULTY ACCOUNT</strong></h4>
+                            <hr />
+                                    <div class="input-group-prepend">
+                                    <i class="input-group-text fa fa-envelope"></i>
+                                        <input class="input form-control" type="email" name="email" placeholder="Enter your Email " />
+                                    </div>
+                            <hr />
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text fa fa-lock" style="padding: 7px 16px;"></i>
+                                    <input class="input form-control" type="password" name="password" placeholder="Select password" />
+                                </div>
+                            <hr />
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text fa fa-lock"style="padding: 7px 16px;"></i>
+                                    <input class="input form-control" type="password" name="cofirm_password" placeholder="Confirm password" />
+                                </div>
+                            <hr />
+                                <div class="input-group-prepend">
+                                        <i class="input-group-text fa fa-address-card"></i>
+                                        <input class="input form-control" type="text" name="fname" placeholder="First Name" /> 
+                                        <input type="text" class="input form-control" name="lname" placeholder="Last Name&nbsp;"/>
+                                    </div>
+                            <hr />
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text fa fa-university"></i>
+                                    <input class="input form-control" type="text" name="university" placeholder="University" />
+                                </div>
+                            <hr />
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text fa fa-user-circle"></i>
+                                    <input class="input form-control" type="text" name="enrolment_no" placeholder="Faculty ID" />
+                                </div>
+                            <hr/>
+                            <button type="submit" class="btn_submit">Sign Up</button>
+                            <hr />
+                            <h6>Have an existing account ?</h6>
+                            
+                            <a href="faculty_login.html"><button type="button" class="btn_submit">Login</button></a>
+                            
+                        </form>
+                    </div>
+                </div>
+                <!-- Container ends here -->
+
+                <!-- Footer starts here -->
+                <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
+                    <div class="footer-copyrights text-center py-3 bg-dark strip_behind_footer">
+                        <span id="copyright_text">&copy; WOLFPACK 2019 : </span>
+                        <a href="https:www.google.com">wolfpack.pk</a>
+                    </div>
+                </footer>
+                <!-- Footer ends here-->
+            </div>
+            <!-- Container-fluid ends here -->
+        </div>
+		
+		<!-- Javascript code starts here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/scripts.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Javascript code ends here -->
+    </body>
+<!-- Body ends here -->
+
+    
+</html>

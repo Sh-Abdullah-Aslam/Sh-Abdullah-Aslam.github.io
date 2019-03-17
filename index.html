@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <!-- Head starts here --><head>
+        <title>Home Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS Files included -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+             <link rel="stylesheet" href="assets/css/styles.css" />
+
+		<style>
+			@media screen and (max-width : 768px)
+			{
+				#main_div_for_main_page 
+				{
+					position: static;
+					transform: translate(1%, 1%);
+				}
+			}
+		</style>
+  </head>
+    <!-- Head ends here -->
+    
+    <!-- Body starts here -->
+    <body>
+        <div id="main_div">
+            <div class="container-fluid">
+				<!-- navbar starts here -->
+				<!-- navbar will have dark theme and will always remain on the top of each page-->
+				<nav class="navbar navbar-expand-md navbar-dark navbar-sticky-top bg-dark" >
+					<a class="navbar-brand" href=""><img src="assets/img/" alt="logo" name="university-logo" aria-label="logo"/></a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<!--Links that navbar contains-->
+
+					<div class="collapse navbar-collapse text-center" id="my_nav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="#" target="_self">Home</a></li>
+							<li class="nav-item dropdown text-center" ><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Login</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="student_login.html">Student</a>
+										<a class="dropdown-item" href="faculty_login.html">Faculty</a>
+										<a class="dropdown-item" href="admin_login.html">Admin</a>
+									</div>
+							</li>
+							<li class="nav-item dropdown text-center"><a class="nav-link dropdown-toggle" href="sign-up.html" id="" target="_self" data-toggle="dropdown">Sign Up</a>
+								<div class="dropdown-menu bg-light">
+										<a class="dropdown-item" href="student_sign_up.html">Student</a>
+										<a class="dropdown-item" href="faculty_sign_up.html">Faculty</a>
+										<a class="dropdown-item" href="admin_sign_up.html">Admin</a>
+									</div>
+							</li>
+
+							<!-- Check  afterwards and enable if required
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+							-->
+						</ul>
+					</div>        
+				</nav>
+				<!-- navbar ends here-->
+
+                <!-- main div with css to center align starts here -->
+				<div class="row text-center" id="main_div_for_main_page">
+					<div class="col-lg-4 col-md-4 col-xs-12">
+						<br />
+						<h2>Student</h2>
+						<hr />
+						<img class="img-responsive image_above_button" src="assets/img/free-images/academy-accomplishment-celebrate-267885-(small).jpg" alt="Student-Placeholder" />
+						<hr />
+						<a href="student_login.html"><button class="btn_submit">Login</button></a>
+						<br /><br />
+						<a href="student_sign_up.html"><button class="btn_submit">Sign Up</button></a>
+						<hr />
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-xs-12">
+						<br />
+						<h2>Faculty</h2>
+						<hr />
+						<img class="img-responsive image_above_button" src="assets/img/free-images/concept-fashion-happy-7370-(small).jpg" alt="Faculty-Placeholder" id="image_above_button">
+						<hr />
+						<a href="faculty_login.html"><button class="btn_submit">Login</button></a>
+						<br /><br />
+						<a href="faculty_sign_up.html"><button class="btn_submit">Sign Up</button></a>
+						<hr />
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-xs-12">
+						<br />
+						<h2>Administration</h2>
+						<hr />
+						<img class="img-responsive image_above_button" src="assets/img/free-images/victoria-heath-252635-unsplash-(small).jpg" alt="Admin-Placeholder">
+						<hr />
+						<a href="admin_login.html"><button class="btn_submit">Login</button></a>
+						<br /><br />
+						<a href="admin_sign_up.html"><button class="btn_submit">Sign Up</button></a>
+						<hr />
+					</div>
+				</div>
+                <!-- main div ends here -->
+
+                <!-- Footer starts here -->
+                <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
+                    <div class="footer-copyrights text-center py-3 bg-dark strip_behind_footer">
+                        <span id="copyright_text">&copy; WOLFPACK 2019 : </span>
+                        <a href="https:www.google.com">wolfpack.pk</a>
+                    </div>
+                </footer>
+                <!-- Footer ends here-->
+            </div>
+            <!-- Container-fluid ends here -->
+            
+        </div>
+        <!-- '#Main_page' div ends here -->
+        
+        <!-- Javascript code starts here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		
+		<script>
+		$ (function(){
+			if($(window).width() >= 768)
+					$("#my_nav").addClass("mr-5");
+		});
+		$(function (){
+			$(window).on('resize', function(){
+				if($(window).width() >= 768)
+					$("#my_nav").addClass("mr-5");
+				else
+					$("#my_nav").removeClass("mr-5");
+			})
+		});
+		</script>
+        <!-- Javascript code ends here -->
+        
+    </body>
+<!-- Body ends here -->
+
+    
+</html>
