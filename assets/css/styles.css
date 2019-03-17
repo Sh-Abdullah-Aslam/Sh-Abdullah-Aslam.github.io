@@ -8,7 +8,7 @@
 	#main_div_for_main_page 
 	{
 		position: static;
-		transform: translate(1%, 1%);
+		transform: translate(5%, 1%);
 	}
 }
 
@@ -152,6 +152,7 @@ body
     border: 2px solid #E8E8E8;
     border-radius: 15px;
     background: rgba(255,255,255,0.50);
+    height: 80vh;
 }
 
 #login_form_container:hover
