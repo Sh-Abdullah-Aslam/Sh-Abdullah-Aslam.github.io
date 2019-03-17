@@ -4,7 +4,7 @@
 
     <!-- Head starts here -->
     <head>
-        <title>Faculty Side View</title>
+        <title>Student Side View</title>
         <meta charset="utf-8">
         
         <!-- CSS Files included -->
@@ -29,19 +29,13 @@
 						<!--Links that navbar contains-->
 
 					<div class="collapse navbar-collapse text-center" id="my_nav">
-						<ul class="navbar-nav mr-auto ml-5">
-							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Courses</a>
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item dropdown" ><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Courses</a>
 								<div class="dropdown-menu">
-									<!-- Display the list of courses here -->
-									<a class="dropdown-item" href="">Course No : 1</a>
-									<a class="dropdown-item" href="">Course No : 2</a>
+									<a class="dropdown-item" href="student_login.html">Course 1</a>
 								</div>
 							</li>
-							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >New Course</a></li>
-							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >Drop Course</a></li>
 						</ul>
-						
-							<!--Links that navbar contains-->
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item"><a class="nav-link" href="#" target="_self" onClick="confirm_logout()">Logout</a></li>
 							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >Home</a></li>
@@ -50,40 +44,29 @@
 						</ul>
 					</div>
 				</nav>
-				<!-- Navbar ends here -->
-				
+				<!-- Navbar ends here-->
 				
 				<!-- Main page starts view -->
 				<div class="container">
-					<div class="row text-center" id="full_page_row_faculty">
-						<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
-							<h3><em>Dates to Remember</em></h3>
-							<hr />
-							<div class="floating_block">
-								<span class="fa fa fa-close close_panel_btn"></span>
-								<h4>Course Name</h4>
+					<div class="row text-center" id="post_page_div">
+						<div class="col-lg-2 col-md-1 col-sm-1"></div>
+						<div class="col-lg-8 col-md-9 col-sm-10 col-xs-12">
+							<form class="form-group">
+								<h2>Write your post here</h2>
 								<hr />
-								<h5>Caption (Assignment/Quiz etc.)</h5>
+								<textarea class="text-center" maxlength="100" rows="4" id="main_text_area"></textarea>
+								<span class="fa" id="word_count">0 letters</span>
 								<hr />
-								<br />
-								<h6><em>Topics Mentioned</em></h6>
-								<button class="btn btn-info">Notify Students</button>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
-							<h3>Forums</h3>
-							<hr />
-							<button class="btn_submit" type="button"><span>My Posts</span></button>
-							<br /><br /><br />
-							<a href="faculty_forum.html"><button class="btn_submit" type="button">&nbsp;&nbsp;Teachers Forum</button></a>
-							<br /><br /><br />
-							<a href="faculty_forum.html"><button class="btn_submit" type="button">University Forum</button></a>
+								<button type="button" class="btn_submit">Post</button>
+								<button type="button" class="btn_submit">Save Draft</button>
+								<a href="student_view.html"><button type="button" class="btn_submit">Cancel</button></a>
+							</form>
 						</div>
 					</div>
 				</div>
 				<!-- Main page ends view -->
-
 				
+
                 <!-- Footer starts here -->
                 <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
                     <div class="footer-copyrights text-center py-3 bg-dark strip_behind_footer">
@@ -97,12 +80,12 @@
 		
 		<!-- Javascript code starts here -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="assets/js/scripts.js" ></script>
+		<script src="assets/js/scripts.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <!-- Javascript code ends here -->
 		
 		<script>
+			var count = 0;
 			$ (function(){
 				if($(window).width() >= 768)
 					{
@@ -125,7 +108,20 @@
 						}
 				})
 			});
+			
+			$("textarea").on('keyup', function(){
+				if(count <= 99)
+					{
+						count++;
+						$("#word_count").text(count + " letters");
+					}
+				else
+				{
+					alert("cannot enter more text");
+				}
+			});
 		</script>
+        <!-- Javascript code ends here -->
     </body>
 <!-- Body ends here -->
 

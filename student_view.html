@@ -29,15 +29,69 @@
 						<!--Links that navbar contains-->
 
 					<div class="collapse navbar-collapse text-center" id="my_nav">
-					<ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#" target="_self" onClick="confirm_logout()">Logout</a></li>
-                        <li class="nav-item"><a class="nav-link" href=".html" target="_self" >Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
-                    </ul>
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item dropdown" ><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Courses</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="student_login.html">Course 1</a>
+								</div>
+							</li>
+						</ul>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="#" target="_self" onClick="confirm_logout()">Logout</a></li>
+							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+						</ul>
 					</div>
 				</nav>
-				<!-- navbar ends here-->
+				<!-- Navbar ends here-->
+				
+				<!-- Main page initial view div content starts here -->
+				<div class="container">
+					<div class="row text-center" id="row_student">
+						<br />
+						
+						<div class="col-sm-12 col-xs-12 col-md-8 col-lg-4">
+							<h3><em>Notifications</em></h3>
+							<hr />
+							<div class="floating_block">
+								<span class="fa fa fa-close close_panel_btn"></span>
+								<h4>Course Name</h4>
+								<hr />
+								<h5>Notification Type</h5>
+								<hr />
+								<br />
+								<h6><em>Content of Notification goes here</em></h6>
+							</div>
+						</div>
+						
+						<div class="col-sm-12 col-xs-12 col-md-8 col-lg-4">
+							<h3><em>Dates to remember</em></h3>
+							<hr />
+							<div class="floating_block">
+								<span class="fa fa fa-close close_panel_btn"></span>
+								<h4>Course Name</h4>
+								<hr />
+								<h5>Caption (QUIZ etc.)</h5>
+								<hr />
+								<br />
+								<h6><em>Topics Mentioned</em></h6>
+							</div>
+						</div>
+						
+						<div class="col-sm-12 col-xs-12 col-md-8 col-lg-4">
+							<h3>Forums</h3>
+							<hr />
+							<button class="btn_submit" type="button">My Posts</button>
+							<br /><br /><br />
+							<a href="student_forum.html"><button class="btn_submit" type="button">&nbsp;Students Forum&nbsp;</button></a>
+							<br /><br /><br />
+							<a href="student_forum.html"><button class="btn_submit" type="button">University Forum</button></a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- Main page initial view div content ends here -->
 
                 <!-- Footer starts here -->
                 <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
@@ -52,25 +106,34 @@
 		
 		<!-- Javascript code starts here -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/scripts.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		
 		<script>
 			$ (function(){
 				if($(window).width() >= 768)
+					{
 						$("#my_nav").addClass("mr-5");
+						$("#my_nav > .mr-auto").addClass("ml-5");
+					}
 			});
 			
 			$(function (){
 				$(window).on('resize', function(){
 					if($(window).width() >= 768)
-						$("#my_nav").addClass("mr-5");
+						{
+							$("#my_nav").addClass("mr-5");
+							$("#my_nav > .mr-auto").addClass("ml-5");
+						}
 					else
-						$("#my_nav").removeClass("mr-5");
+						{
+							$("#my_nav").removeClass("mr-5");
+							$("#my_nav > .mr-auto").removeClass("ml-5");
+						}
 				})
 			});
 		</script>
-		
         <!-- Javascript code ends here -->
     </body>
 <!-- Body ends here -->

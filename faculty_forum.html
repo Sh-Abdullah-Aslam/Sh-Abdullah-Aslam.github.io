@@ -55,29 +55,19 @@
 				
 				<!-- Main page starts view -->
 				<div class="container">
-					<div class="row text-center" id="full_page_row_faculty">
-						<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
-							<h3><em>Dates to Remember</em></h3>
-							<hr />
-							<div class="floating_block">
-								<span class="fa fa fa-close close_panel_btn"></span>
-								<h4>Course Name</h4>
+					<div class="row text-center" id="post_page_div">
+						<div class="col-lg-2 col-md-1 col-sm-1"></div>
+						<div class="col-lg-8 col-md-9 col-sm-10 col-xs-12">
+							<form class="form-group">
+								<h2>Write your post here</h2>
 								<hr />
-								<h5>Caption (Assignment/Quiz etc.)</h5>
+								<textarea class="text-center" style="width: 100%;" maxlength="100" rows="4"></textarea>
+								<span class="fa" id="word_count">0 letters</span>
 								<hr />
-								<br />
-								<h6><em>Topics Mentioned</em></h6>
-								<button class="btn btn-info">Notify Students</button>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
-							<h3>Forums</h3>
-							<hr />
-							<button class="btn_submit" type="button"><span>My Posts</span></button>
-							<br /><br /><br />
-							<a href="faculty_forum.html"><button class="btn_submit" type="button">&nbsp;&nbsp;Teachers Forum</button></a>
-							<br /><br /><br />
-							<a href="faculty_forum.html"><button class="btn_submit" type="button">University Forum</button></a>
+								<button type="button" class="btn_submit">Post</button>
+								<button type="button" class="btn_submit">Save Draft</button>
+								<a href="faculty_view.html"><button type="button" class="btn_submit">Cancel</button></a>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -103,6 +93,7 @@
         <!-- Javascript code ends here -->
 		
 		<script>
+			var count = 0;
 			$ (function(){
 				if($(window).width() >= 768)
 					{
@@ -124,6 +115,18 @@
 							$("#my_nav > .mr-auto").removeClass("ml-5");
 						}
 				})
+			});
+			
+			$("textarea").on('keyup', function(){
+				if(count <= 99)
+					{
+						count++;
+						$("#word_count").text(count + " letters");
+					}
+				else
+				{
+					alert("cannot enter more text");
+				}
 			});
 		</script>
     </body>

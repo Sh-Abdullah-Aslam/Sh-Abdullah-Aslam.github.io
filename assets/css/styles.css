@@ -189,11 +189,83 @@ body
 
 #full_page_row_faculty
 {
-	height: 85vh;
-	transform: translate(1%, 1%);
+	transform: translate(5%, 5%);
+	background: rgba(255,255,255, 0.5);
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 30px;
 }
 
 /*------------------------------- Faculty View CSS ends here ------------------------------*/
 
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+/*------------------------------ Student View CSS starts here -----------------------------*/
+
+#row_student
+{
+	padding: 10px;
+	margin-bottom: 50px;
+	border-radius: 10px;
+	transform: translateY(5vh);
+	background: rgba(255,255,255, 0.5);
+}
+
+.floating_block
+{
+	color:azure;
+	padding: 10px;
+	border-radius: 10px;
+	border: 2px solid azure;
+	background: rgba(0,0,0,0.6);
+}
+
+.close_panel_btn
+{
+	float:right;
+	color:black;
+}
+
+.close_panel_btn:hover
+{
+	color:white;
+	cursor: pointer;
+}
+
+/*
+.date_block
+{
+	color:azure;
+	padding: 10px;
+	border-radius: 10px;
+	border: 2px solid azure;
+	background: rgba(0,0,0,0.5);
+}
+*/
+
+
+/*------------------------------- Student View CSS ends here ------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+/*---------------------------------- Forum CSS starts here --------------------------------*/
+
+#post_page_div
+{
+	padding: 10px;
+	border-radius: 25px;
+	border: 1px solid gray;
+	background: rgba(255,255,255,0.75);
+	transform: translateY(2vh);
+	border-bottom: 50px;
+}
+
+#main_text_area
+{
+	 width: 100%;
+	resize: none;
+}
+
+/*----------------------------------- Forum CSS ends here ---------------------------------*/
