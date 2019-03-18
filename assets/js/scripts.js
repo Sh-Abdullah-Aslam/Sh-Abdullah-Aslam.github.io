@@ -3,8 +3,6 @@
  ------------------------------------------------------------ */
 
 
-
-
 /* ------------------------------------------------------------
 			functions for both student and faculty
  ------------------------------------------------------------ */
@@ -21,6 +19,13 @@ function confirm_logout()
 						Students functions
  ------------------------------------------------------------ */
 
+
+// Function to close a notification panel
+$(function(){
+	$(".close_panel_btn").click(function(){
+		$(this).parent("div").fadeOut(250);
+	})
+});
 
 /* ------------------------------------------------------------
 						Faculty functions
