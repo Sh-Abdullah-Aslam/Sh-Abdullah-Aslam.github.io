@@ -49,36 +49,37 @@
                             <hr />
                                     <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-envelope"></i>
-                                        <input class="input form-control" type="email" name="email" placeholder="Enter your Email " />
+                                        <input class="input form-control" type="email" placeholder="Enter your Email " required />
                                     </div>
                             <hr />
                                 <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-lock" style="padding: 7px 16px;"></i>
-                                    <input class="input form-control" type="password" name="password" placeholder="Select password" />
+                                    <input class="input form-control" type="password" name="password" placeholder="Select password" required />
                                 </div>
                             <hr />
                                 <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-lock" style="padding: 7px 16px;"></i>
-                                    <input class="input form-control" type="password" name="cofirm_password" placeholder="Confirm password" />
+                                    <input class="input form-control" type="password" name="cofirm_password" placeholder="Confirm password" required />
                                 </div>
                             <hr />
                                 <div class="input-group-prepend">
                                         <i class="input-group-text fa fa-address-card"></i>
-                                        <input class="input form-control" type="text" name="fname" placeholder="First Name" /> 
-                                        <input type="text" class="input form-control" name="lname" placeholder="Last Name&nbsp;"/>
+                                        <input class="input form-control" type="text" name="fname" placeholder="First Name" required /> 
+                                        <input type="text" class="input form-control" name="lname" placeholder="Last Name&nbsp;" required/>
                                     </div>
                             <hr />
                                 <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-university"></i>
-                                    <input class="input form-control" type="text" name="university" placeholder="University" />
+                                    <input class="input form-control" type="text" name="university" placeholder="University" required />
                                 </div>
                             <hr />
                                 <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-user-circle"></i>
-                                    <input class="input form-control" type="text" name="enrolment_no" placeholder="Enrollment No" />
+                                    <input class="input form-control" type="text" name="enrolment_no" placeholder="Enrollment No" required />
                                 </div>
                             <hr/>
-                            <button type="submit" class="btn_submit">Sign Up</button>
+                            <button type="submit" class="btn_submit validate">Sign Up</button>
+							
                             <hr />
                             <h6>Have an existing account ?</h6>
                             
@@ -107,6 +108,17 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 			<!-- Javascript code ends here -->
+        
+        <script>
+			/*$(function(){
+				$(".validate").on("click", function(){
+					if(($('.input[name=email]').val().indexOf('@') != -1) && ($('.input[name=email]').val().indexOf('.') != -1))
+						alert("valid email");
+					else
+						alert("invalid email");
+				})
+			});*/
+        </script>
     </body>
 <!-- Body ends here -->
 

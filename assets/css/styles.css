@@ -193,7 +193,7 @@ body
 	background: rgba(255,255,255, 0.5);
 	border-radius: 10px;
 	padding: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 /*------------------------------- Faculty View CSS ends here ------------------------------*/
@@ -283,3 +283,102 @@ body
 }
 
 /*----------------------------------- Forum CSS ends here ---------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+/*--------------------------- Course view faculty CSS starts here -------------------------*/
+
+#banner_div_course_page
+{
+    background: rgba(0,0,0,0.4);
+    color: azure;
+    margin: 10px;
+    padding: 10px;
+}
+
+input[name=Resource_File]
+{
+    margin:0 0 15px 0;
+}
+
+input[name=Resource_File]:hover
+{
+    cursor: pointer;
+}
+
+#textarea_for_faculty_note
+{
+    position: relative;
+    width: 100%;
+}
+
+#textarea_for_resourse_details
+{
+    position: relative;
+    width: 100%;
+}
+
+.overlay
+{
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	visibility: hidden;
+	background: rgba(0,0,0,0.8);
+}
+
+.data_in_overlay
+{
+	position: relative;
+	width: 75%;
+	height: 75%;
+	left: 50%;
+	top: 50%;
+	visibility: hidden;
+	background: rgba(255,255,255,0.8);
+	transform: translate(-50%, -50%);
+	border-radius:25px;
+	z-index: 2;
+}
+
+#textarea_for_homework_note
+{
+	position: relative;
+	width: 80%;
+	resize: none;
+}
+
+#close_overlay
+{
+	margin-right: 20px;
+}
+
+ul > li > a > h6 
+{
+	color:azure;
+	font-size: 20px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	text-align: right;
+}
+
+#lower_row_student_course_page
+{
+	background: rgba(0,0,0,0.25);
+	border: 10px solid black;
+	padding: 10px;
+}
+
+#dates_column
+{
+	color:azure;
+	font-size: 20px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	text-align: left;
+}
+/*-------------------------------- Course view CSS ends here ------------------------------*/

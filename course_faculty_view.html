@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <!-- Head starts here -->
+    <head>
+        <title>Course View Faculty(Course Name Will Display Here)</title>
+        <meta charset="utf-8">
+        
+        <!-- CSS Files included -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/styles.css" />
+		
+		<style>
+			.col-6 > h1
+			{
+				text-align: center;
+			}
+			@media screen and (max-width:768px)
+			{
+				#full_page_row_faculty
+				{
+					transform: translate(0.5%, 1%);
+				}
+			}
+		</style>
+
+    </head>
+    <!-- Head ends here -->
+    
+    <!-- Body starts here -->
+    <body>
+		<div id="main_div">
+            <div class="container-fluid">
+				<!-- navbar starts here -->
+				<!-- navbar will have dark theme and will always remain on the top of each page-->
+				<nav class="navbar navbar-expand-md navbar-dark navbar-sticky-top bg-dark" >
+					<a class="navbar-brand" href="#"><img src="assets/img/" alt="logo" name="university-logo" /></a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<!--Links that navbar contains-->
+
+					<div class="collapse navbar-collapse text-center" id="my_nav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="" target="_self">Home</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="" target="_self" onclick="Confirm_Faculty_Logout();">Logout</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+						</ul>
+					</div>
+
+				</nav>
+				<!-- navbar ends here-->
+
+				<!-- Start of container -->
+                <div class="container" id="full_page_row_faculty">
+					
+					<!-- Start of Notes and Notifications row -->
+					<div id="banner_div_course_page">
+						<div class="row">
+							<div class="col-12">
+								<center><h1><u>Notes and Notifications</u></h1></center>
+								<br /> 
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<h3> Add A Note :</h3>
+								<textarea rows="2" id="textarea_for_faculty_note" style="resize: none;" maxlength="250"></textarea>
+								<br />
+								<center><label> Characters Remaining : </label><span id="WC_Note"> 250</span></center>
+								<br />
+								<center>
+									<button type="button" class="btn_submit" id="note_post">Post</button>
+									<button type="button" class="btn_submit" id="note_notify">Notify</button>
+									<button type="button" class="btn_submit" id="note_clear">Clear</button>
+								</center>
+							</div>
+
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<h3> Add A Resource :</h3>
+								<input type="file" name="Resource_File" accept=".docs,.docx,.doc,.pdf,.xlx,.xlsx,.ppt,.pptx" placeholder="" value="" />
+								<br />
+								<textarea rows="1" id="textarea_for_resourse_details" style="resize: none;" maxlength="100" placeholder="Add details (optional) "></textarea>
+								<br />
+								<center><label> Characters Remaining : </label><span id="WC_Resourse"> 100</span></center>
+								<center>
+									<button type="button" class="btn_submit" id="resc_post">Post</button>
+									<button type="button" class="btn_submit" id="resc_notify">Notify</button>
+									<button type="button" class="btn_submit" id="resc_clear">Clear</button>
+								</center>
+							</div>
+						</div>
+					</div>
+					<!-- End of Notes and Notifications row -->
+					
+					<hr />
+
+					<!-- Start of counter div -->
+					<div class="row">
+						<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-xs-12">
+							<h1><u>Conducted</u></h1>
+							<br />
+							<div class="row">
+								<hr />
+								<div class="col-6">
+									<h2>Quizzes</h2>
+									<h1><span class="counter">5</span></h1>
+								</div>
+
+								<div class="col-6">
+									<h2>Assignments</h2>
+									<h1><span class="counter">5</span></h1>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-1 col-md-1"><hr /> </div>
+						
+						<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+							<h1><u>Remaining</u></h1>
+							<br />
+							<div class="row">
+								<div class="col-6">
+									<h2>Quizzes</h2>
+									<h1><span class="counter">2</span></h1>
+								</div>
+
+								<div class="col-6">
+									<h2>Assignments</h2>
+									<h1><span class="counter">2</span></h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end of counter div -->
+					<hr />
+					<center>
+						<button type="button" class="btn_submit" id="have_quiz">&nbsp;&nbsp;&nbsp;Conduct a Quiz&nbsp;&nbsp;&nbsp;&nbsp;</button>
+						<button type="button" class="btn_submit" id="have_assignment">Conduct an Assignment</button>
+					</center>
+					
+				</div>
+                <!-- Container ends here -->
+
+                <!-- Footer starts here -->
+                <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
+                    <div class="footer-copyrights text-center py-3 bg-dark strip_behind_footer">
+                        <span id="copyright_text">&copy; WOLFPACK 2019 : </span>
+                        <a href="https:www.google.com">wolfpack.pk</a>
+                    </div>
+                </footer>
+                <!-- Footer ends here-->
+            </div>
+            <!-- Container-fluid ends here -->
+        </div>
+		
+		<div class="overlay">
+			<div class="data_in_overlay">
+				<span class="fa fa-2x fa-close close_panel_btn" id="close_overlay"></span>
+				<br />
+				<h2> DATE OF <span id="quiz_or_assignment">QUIZ</span> : </h2>
+				<input id="date" type="date"/>
+				<br /><br />
+				<h4>Topics</h4>
+				<select size="4" multiple>
+					<option value="">Resource 1</option>
+					<option value="">Resource 2</option>
+					<option value="">Resource 3</option>
+					<option value="">Resource 4</option>
+					<option value="">Resource 5</option>
+				</select>
+				
+				<br /><br />
+				<textarea rows="3" id="textarea_for_homework_note" class="text-center" placeholder=""></textarea>
+				<br /><br />
+				
+				<button class="btn_submit" type="button">Notify</button>
+				<button class="btn_submit" type="button" id="close_overlay_btn">Cancel</button>
+			</div>
+		</div>
+		
+		<!-- Javascript code starts here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/scripts.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		
+			<!-- Javascript files for animated counter -->
+				<script src="assets/waypoints js/jquery.waypoints.min.js"></script>
+				<script src="assets/counterUp js/jquery.counterup.min.js"></script>
+			<!-- Javascript files for animated counter -->
+
+			<!-- jQuery Code to animate the counter starts here -->
+			<script>
+				$(function(){
+					$('.counter').counterUp
+					({
+						time : 750
+					});
+				});
+			</script>
+			<!-- jQuery Code to animate the counter ends here -->
+
+		
+			<!-- jQuery Code to count the words in text area starts here -->
+			<script>
+				var count_note = 0;
+				var remaining_note = 250;
+				$(function(){
+	               	$("#textarea_for_faculty_note").keyup(function(){
+						count_note = $("#textarea_for_faculty_note").val().length; 
+						remaining_note = 250 - count_note;
+						$("#WC_Note").text( " " + remaining_note);
+					});
+	            });
+
+	            var count_resc = 0;
+				var remaining_resc = 100;
+	            $(function(){
+	               	$("#textarea_for_resourse_details").keyup(function(){
+						count_resc = $("#textarea_for_resourse_details").val().length; 
+						remaining_resc = 100 - count_resc;
+						$("#WC_Resourse").text( " " + remaining_resc);
+					});
+	            });
+                $("#note_clear").click(function(){
+                    $("WC_Note").text(" 250");
+                    $("#textarea_for_faculty_note").text("Clear text on this click");
+                    alert("");
+                });
+			</script>
+			<!-- jQuery Code to count the words in text area ends here -->
+
+			<!-- Javascript code to validate if the input has been made starting-->
+			<script>
+				$('#resc_post').click(function(){
+					if($('input[name=Resource_File]').val() == '')
+					{
+						alert("No Resource Selected");
+					}
+				});
+			</script>
+			<!-- Javascript code to validate if the input has been made ending -->
+		
+			<!-- toggle overlay starts here -->
+				<!-- Code to Show -->
+			<script>
+				$(function(){
+					$("#have_quiz").click(function(){
+						$(".overlay").css("visibility", "visible");
+						$(".data_in_overlay").css("visibility", "visible");
+						$("#quiz_or_assignment").text("Quiz");
+					});
+					
+					$("#have_assignment").click(function(){
+						$(".overlay").fadeIn(500);
+						$("#quiz_or_assignment").text("Assignment");
+					});
+				});
+			</script>
+		
+				<!-- Code to Hide -->
+			<script>
+				$(function(){
+					$("#close_overlay").click(function(){
+						$(".overlay").fadeOut(500);
+					});
+					$("#close_overlay_btn").click(function(){
+						$(".overlay").fadeOut(500);
+					});
+				});
+			</script>
+			<!-- toggle overlay ends here -->
+		
+        <!-- Javascript code ends here -->
+    </body>
+<!-- Body ends here -->
+
+    
+</html>
