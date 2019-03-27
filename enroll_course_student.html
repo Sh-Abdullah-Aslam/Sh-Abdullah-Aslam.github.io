@@ -31,13 +31,31 @@
 						<!--Links that navbar contains-->
 
 					<div class="collapse navbar-collapse text-center" id="my_nav">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active dropdown" ><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Courses</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="course_student_view.html">Course 1</a>
+									<a class="dropdown-item active" href="#">Enroll A Course</a>
+								</div>
+							</li>
+						</ul>
 						<ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html" target="_self" >Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="student_sign_up.html" target="_self">Sign Up</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
-                        </ul>
+							<li class="nav-item"><a class="nav-link" href="student_view.html" target="_self" >Home</a></li>
+							<li class="nav-item dropdown" ><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Forum</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="student_private_forum.html">New Private Post</a>
+									<a class="dropdown-item" href="student_forum.html">New Public Post</a>
+									<a class="dropdown-item" href="student_forum_posts.html">My Posts</a>
+									<a class="dropdown-item" href="student_forum_private_posts.html">Students' Posts</a>
+									<a class="dropdown-item" href="student_forum_all_posts.html">All Posts</a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="index.html" target="_self" onClick="confirm_logout()">Logout</a></li>
+						</ul>
 					</div>
+				</nav>
 				</nav>
 				<!-- navbar ends here-->
 
@@ -46,27 +64,21 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="login_form_container">
                         <form class="text-center" id="login_form"> <!--method="post" action="student_view.html"--> 
                             <br />
-                            <h2><strong>Student Account Login</strong></h2>
+                            <h2><strong>Enroll A Course</strong></h2>
                             <br />
                                     <div class="input-group-prepend">
-                                    <i class="input-group-text fa fa-user"></i>
-                                        <input class="input form-control" type="text" name="username" placeholder="Enter your username here" required />
+                                    <i class="input-group-text fa fa-id-card"></i>
+                                        <input class="input form-control" type="text" name="username" placeholder="Course ID" required />
                                     </div>
                             <br /><hr><br />
                                 <div class="input-group-prepend">
-                                    <i class="input-group-text fa fa-user fa fa-lock"></i>
-                                    <input class="input form-control" type="password" name="password" placeholder="Enter your password here" required />
+                                    <i class="input-group-text fa fa-lock"></i>
+                                    <input class="input form-control" type="password" name="password" placeholder="Access Code" required />
                                 </div>
                             <br /><hr /><br />
 							<!-- Remove this button's jquery code in back-end implementation -->
-                            <button type="button" class="btn_submit" name="login">Login</button>
+                            <button type="button" class="btn_submit" name="enroll">Enroll</button>
                                 <br /><br /><hr>
-                            <a href="forgot_pass" id="forgot_password_text">Forgot your password</a>
-                                <br />
-                                <hr />
-                            <h3>New To Piazza?</h3>
-                            <a href="student_sign_up.html" target="_self"><button type="button" class="btn_submit">Sign Up</button></a>
-                            <br />
                         </form>
                     </div>
                 </div>
@@ -91,9 +103,21 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		
 		<script>
+			function All_Filled()
+			{
+				for (x in document.getElementsByClassName("form-control"))
+					{
+						if(x.text == "")
+							return false;
+					}
+				return true;
+			}
 			$(function(){
-				$('button[name=login]').click(function(){
-					window.location.href =	"student_view.html";
+				$('button[name=enroll]').click(function(){
+					if(All_Filled())
+						window.location.href =	"course_student_view.html";
+					else
+						alert("Please fill all the boxes first");
 				});
 			});
 		</script>

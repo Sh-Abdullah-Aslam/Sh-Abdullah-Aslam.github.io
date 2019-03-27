@@ -30,11 +30,33 @@
 						<!--Links that navbar contains-->
 
 					<div class="collapse navbar-collapse text-center" id="my_nav">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="" target="_self">Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="" target="_self" onclick="Confirm_Faculty_Logout();">Logout</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="#" target="_blank">About Us</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+						<ul class="navbar-nav mr-auto ml-5">
+							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Courses</a>
+								<div class="dropdown-menu">
+									<!-- Display the list of courses here -->
+									<a class="dropdown-item" href="course_faculty_view.html">Course No : 1</a>
+									<a class="dropdown-item" href="">Course No : 2</a>
+								</div>
+							</li>
+							<li class="nav-item active"><a class="nav-link" href="#" target="_self" >New Course</a></li>
+							<li class="nav-item"><a class="nav-link" href=".html" target="_self" >Drop Course</a></li>
+						</ul>
+						
+							<!--Links that navbar contains-->
+						<ul class="navbar-nav ml-auto">							
+							<li class="nav-item active"><a class="nav-link" href="#" target="_self" >Home</a></li>
+							<li class="nav-item dropdown" ><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Forum</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="faculty_forum.html">New Private Post</a>
+									<a class="dropdown-item" href="faculty_private_forum.html">New Public Post</a>
+									<a class="dropdown-item" href="faculty_forum_posts.html">My Posts</a>
+									<a class="dropdown-item" href="faculty_forum_private_posts.html">Teachers' Posts</a>
+									<a class="dropdown-item" href="faculty_forum_all_posts.html">All Posts</a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="index.html" target="_self" onClick="confirm_logout()">Logout</a></li>
 						</ul>
 					</div>
 
@@ -45,34 +67,34 @@
                 <div class="container">
 
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" id="login_form_container">
-                        <form method="post" action="faculty_view.html" class="text-center" id="login_form">
+                        <form method="post" class="text-center" id="login_form"> <!-- action="faculty_view.html" -->
                             <br />
                             <h4><strong>Add a course</strong></h4>
                             <hr />
                                     <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-tag"></i>
-                                        <input class="input form-control" type="email" name="email" placeholder="Course Title" />
+                                        <input required class="input form-control" type="text" name="coursetitle" placeholder="Course Title" />
                                     </div>
                             <hr />
                                     <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-qrcode"></i>
-                                        <input class="input form-control" type="text" name="coursecode" placeholder="Course Code" />
+                                        <input required class="input form-control" type="text" name="coursecode" placeholder="Course Code" />
                                     </div>
                             <hr />
                                 <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-lock" ></i>
-                                    <input class="input form-control" type="password" name="password" placeholder="Select password" />
+                                    <input required class="input form-control" type="password" name="course_password" placeholder="Select password" />
                                 </div>
                             <hr />
                                 <div class="input-group-prepend">
                                         <i class="input-group-text fa fa-lightbulb-o"></i>
-                                        <input class="input form-control" type="text" name="quizzes" placeholder="&nbsp;&nbsp;No of Quizzes&nbsp;&nbsp;" /> 
-                                        <input type="text" class="input form-control" name="lname" placeholder="No of Assignments"/>
+                                        <input required class="input form-control" type="text" name="quizzes" placeholder="&nbsp;&nbsp;No of Quizzes&nbsp;&nbsp;" /> 
+                                        <input required type="text" class="input form-control" name="assignments" placeholder="No of Assignments"/>
                                     </div>
                             <hr />
                                 <div class="input-group-prepend">
                                     <i class="input-group-text fa fa-university"></i>
-                                    <input class="input form-control" type="text" name="credithours" placeholder="Credit Hours" />
+                                    <input required class="input form-control" type="text" name="credithours" placeholder="Credit Hours" />
                                 </div>
                             <hr />
                                 <div class="input-group-prepend">
@@ -82,10 +104,10 @@
                                         <input class="" type="radio" name="lab" value="n" checked/>No
                                 </div>
                             <hr/>
-                            <button type="submit" class="btn_submit">Confirm</button>
+                            <button type="button" class="btn_submit" onclick="SaveDetails()">Confirm</button>
                             <hr />
                             
-                            <a href="#" onclick="SaveDetails()"><button type="button" class="btn_submit">Cancel</button></a>
+                            <button type="button" class="btn_submit">Cancel</button>
                             
                         </form>
                     </div>
@@ -109,6 +131,14 @@
 		<script src="assets/js/scripts.js" ></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script>
+			$('button[value=Cancel]').click(function(){
+				if(confirm("Are you sure you don't want to save these details"))
+					{
+						window.href.location = 'faculty_view.html';
+					}
+			});
+		</script>
         <!-- Javascript code ends here -->
     </body>
 <!-- Body ends here -->
