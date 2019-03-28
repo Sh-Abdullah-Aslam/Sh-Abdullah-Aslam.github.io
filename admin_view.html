@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <!-- Head starts here -->
+    <head>
+        <title>Student Side View</title>
+        <meta charset="utf-8">
+        
+        <!-- CSS Files included -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+    </head>
+    <!-- Head ends here -->
+    
+    <!-- Body starts here -->
+    <body>
+            <div class="container-fluid">
+				<!-- navbar starts here -->
+				<!-- navbar will have dark theme and will always remain on the top of each page-->
+				<nav class="navbar navbar-expand-md navbar-dark navbar-sticky-top bg-dark" >
+					<a class="navbar-brand" href=""><img src="assets/img/" alt="logo" name="university-logo" aria-label="logo"/></a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<!--Links that navbar contains-->
+
+					<div class="collapse navbar-collapse text-center" id="my_nav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="#" target="_self" >Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">About Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" target="_blank">Contact Us</a></li>
+							<li class="nav-item"><a class="nav-link" href="index.html" target="_self" onClick="confirm_logout()">Logout</a></li>
+						</ul>
+					</div>
+				</nav>
+				<!-- Navbar ends here-->
+				
+				<!-- Main page initial view div content starts here -->
+				<div class="container">
+					<div class="row text-center" id="row_student" style="transform: translateY(1vh);">
+						<br />
+						<div class="col-12">
+							<form>
+								<br />
+								<div class="row text-center justify-content-center">
+									<div class="col-sm-12 col-xs-12 col-md-8 col-lg-6">
+										<h1>Update Logo</h1>
+										<input type="file" class="form-control File_Input" accept="image/*" title="Choose a (100x200)px logo"/>
+									</div>
+								</div>
+								<hr />
+								<div class="row text-center justify-content-center">
+									<div class="col-sm-12 col-xs-12 col-md-8 col-lg-6">
+										<h1>Update About Us Info</h1>
+										<textarea rows="2" style="resize: none; width:100%; text-align:center;" placeholder="Enter text to set as the about us text"></textarea>
+									</div>
+								</div>
+								<hr />
+								<div class="row text-center justify-content-center">
+									<div class="col-sm-12 col-xs-12 col-md-8 col-lg-6">
+										<h1>Update Contact Us Info</h1>
+										
+										<textarea rows="4" style="resize: none; width:100%; text-align:center;" placeholder="Enter address here"></textarea>
+										<br /><br />
+										<input type="text" class="form-control text-center" placeholder="Phone Number : " />
+										<br />
+										<input type="text" class="form-control text-center" placeholder="Cell No Number : " />
+										<br />
+										<input type="text" class="form-control text-center" placeholder="Active Hours : " />
+										<br />
+										
+									</div>
+								</div>
+								<center>
+									<button type="button" class="btn_submit">Save</button>
+									<button type="button" class="btn_submit">Cancel</button>
+								</center>
+							</form>
+						</div>
+							
+					</div>
+				</div>
+				<!-- Main page initial view div content ends here -->
+
+                <!-- Footer starts here -->
+                <footer class="page-footer font-small bg-dark copyrights_container sticky_footer">
+                    <div class="footer-copyrights text-center py-3 bg-dark strip_behind_footer">
+                        <span id="copyright_text">&copy; WOLFPACK 2019 : </span>
+                        <a href="https:www.google.com">wolfpack.pk</a>
+                    </div>
+                </footer>
+                <!-- Footer ends here-->
+            </div>
+            <!-- Container-fluid ends here -->
+		
+		<!-- Javascript code starts here -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/scripts.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		
+		<script>
+			$ (function(){
+				if($(window).width() >= 768)
+					{
+						$("#my_nav").addClass("mr-5");
+						$("#my_nav > .mr-auto").addClass("ml-5");
+					}
+			});
+			
+			$(function (){
+				$(window).on('resize', function(){
+					if($(window).width() >= 768)
+						{
+							$("#my_nav").addClass("mr-5");
+							$("#my_nav > .mr-auto").addClass("ml-5");
+						}
+					else
+						{
+							$("#my_nav").removeClass("mr-5");
+							$("#my_nav > .mr-auto").removeClass("ml-5");
+						}
+				})
+			});
+		</script>
+        <!-- Javascript code ends here -->
+    </body>
+<!-- Body ends here -->
+
+    
+</html>
